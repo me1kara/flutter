@@ -14,14 +14,16 @@ class MyHttpOverrides extends HttpOverrides {
 
 void main() {
   HttpOverrides.global = MyHttpOverrides();
-  runApp(const App4());
+  runApp(const App4()); // App4 위젯을 실행시키겠다
 }
 
 class App4 extends StatelessWidget {
+  // build 메서드를 통해 위젯을 그리겠다
   const App4({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // MaterialApp은 안드
     return MaterialApp(
       home: Container(
         child: Homescreen2(),
